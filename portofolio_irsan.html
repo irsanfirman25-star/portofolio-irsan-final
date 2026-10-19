@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Irsan Firmansyah — Visual Creator | Photographer &amp; Videographer</title>
+  <meta name="description" content="Portofolio resmi Irsan Firmansyah, fotografer dan videografer mahasiswa Universitas Dharma Indonesia. Mengabadikan momen, cerita visual, dan sinematografi bermakna."/>
+  <meta name="author" content="Irsan Firmansyah"/>
+  <meta name="keywords" content="Irsan Firmansyah, Fotografer, Videografer, Cinematic Video, Portrait Photography, Dokumentasi Acara, Universitas Dharma Indonesia"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Irsan Firmansyah — Photographer &amp; Videographer"/>
+  <meta property="og:description" content="Capturing Moments, Creating Stories. Portofolio visual sinematik dan layanan fotografi profesional."/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts: Syne (Editorial/Cinematic Heading) & Plus Jakarta Sans (Clean Modern Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#c9a050',
+              goldHover: '#b58e3f',
+              dark: '#0a0a0c',
+              darker: '#060607',
+              surface: '#121216',
+              surfaceAlt: '#18181f',
+              border: '#24242d',
+              muted: '#8e8e99'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Syne"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Cinematic Styling -->
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #24242d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c9a050;
+    }
+
+    /* Cinematic Vignette & Grain Effect */
+    .hero-vignette {
+      background: radial-gradient(circle at center, rgba(10, 10, 12, 0.4) 0%, rgba(10, 10, 12, 0.95) 85%);
+    }
+
+    /* Subtle Glassmorphism */
+    .glass-nav {
+      background: rgba(10, 10, 12, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* Image zoom on hover */
+    .card-zoom-img {
+      transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .group:hover .card-zoom-img {
+      transform: scale(1.06);
+    }
+
+    /* Smooth entry animation utility */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-gray-200 font-sans antialiased selection:bg-brand-gold selection:text-black">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVIGATION BAR -->
+  <!-- ========================================== -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-brand-border/60 transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Logo Teks -->
+      <a href="#home" class="flex flex-col group focus:outline-none">
+        <span class="font-display font-extrabold tracking-[0.2em] text-white text-base md:text-lg group-hover:text-brand-gold transition-colors">
+          IRSAN FIRMANSYAH
+        </span>
+        <span class="text-[9px] uppercase tracking-[0.3em] text-brand-muted font-medium">
+          Visual Arts &amp; Cinema
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] font-medium" aria-label="Desktop Navigation">
+        <a href="#home" class="text-white hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Home</a>
+        <a href="#about" class="text-gray-400 hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">About</a>
+        <a href="#portfolio" class="text-gray-400 hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Portfolio</a>
+        <a href="#services" class="text-gray-400 hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Services</a>
+        <a href="#process" class="text-gray-400 hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-brand-gold after:transition-all">Process</a>
+        <a href="#contact" class="px-4 py-2 border border-brand-gold/60 text-brand-gold hover:bg-brand-gold hover:text-black font-semibold rounded-sm transition-all duration-300">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-toggle" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" class="md:hidden text-white hover:text-brand-gold p-2 focus:outline-none">
+        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-surface border-b border-brand-border px-6 py-6 space-y-4 text-sm uppercase tracking-widest">
+      <a href="#home" class="mobile-link block text-white hover:text-brand-gold py-1">Home</a>
+      <a href="#about" class="mobile-link block text-gray-300 hover:text-brand-gold py-1">About</a>
+      <a href="#portfolio" class="mobile-link block text-gray-300 hover:text-brand-gold py-1">Portfolio</a>
+      <a href="#services" class="mobile-link block text-gray-300 hover:text-brand-gold py-1">Services</a>
+      <a href="#process" class="mobile-link block text-gray-300 hover:text-brand-gold py-1">Creative Process</a>
+      <a href="#contact" class="mobile-link inline-block mt-2 px-5 py-2.5 bg-brand-gold text-black font-bold rounded-sm">Contact Me</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================== -->
+    <!-- 2. HERO SECTION -->
+    <!-- ========================================== -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+      <!-- Background Cinematic Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1920&q=80" 
+          alt="Cinematic Camera Lens Visual" 
+          class="w-full h-full object-cover object-center filter brightness-[0.45] contrast-[1.1] scale-105 animate-pulse duration-[10000ms]"
+        />
+        <div class="absolute inset-0 hero-vignette"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center">
+        
+        <!-- Identity Tags Badge -->
+        <div class="reveal-on-scroll inline-flex flex-wrap items-center justify-center gap-2 md:gap-3 px-4 py-1.5 rounded-full bg-brand-surfaceAlt/80 border border-brand-border text-xs text-brand-muted tracking-wider mb-8">
+          <span class="flex items-center gap-1.5 text-white font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-ping"></span>
+            21 Years Old
+          </span>
+          <span class="text-brand-border">•</span>
+          <span>Student at Universitas Dharma Indonesia</span>
+          <span class="text-brand-border">•</span>
+          <span class="text-brand-gold font-medium">Photographer &amp; Videographer</span>
+        </div>
+
+        <!-- Tagline & Heading -->
+        <p class="reveal-on-scroll text-xs md:text-sm font-semibold uppercase tracking-[0.35em] text-brand-gold mb-3">
+          I'm Irsan Firmansyah
+        </p>
+
+        <h1 class="reveal-on-scroll font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[1.08] mb-6">
+          Capturing Moments,<br/>
+          <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-brand-gold">
+            Creating Stories.
+          </span>
+        </h1>
+
+        <!-- Deskripsi Utama -->
+        <p class="reveal-on-scroll text-gray-300 text-sm md:text-base lg:text-lg max-w-2xl font-light leading-relaxed mb-10 text-center">
+          Photographer &amp; Videographer yang berfokus pada menangkap momen, menciptakan cerita visual, dan menghadirkan pengalaman melalui fotografi serta videografi.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="reveal-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+          <a href="#portfolio" class="w-full sm:w-auto px-8 py-3.5 bg-brand-gold hover:bg-brand-goldHover text-black font-semibold text-xs uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center gap-2 group">
+            <span>View My Portfolio</span>
+            <i class="fa-solid fa-arrow-down text-[11px] group-hover:translate-y-0.5 transition-transform"></i>
+          </a>
+          <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-white/5 text-white border border-gray-600 hover:border-brand-gold font-semibold text-xs uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center gap-2">
+            <span>Contact Me</span>
+            <i class="fa-solid fa-paper-plane text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Subtle Scroll Down Indicator -->
+        <div class="mt-14 md:mt-20 flex flex-col items-center gap-2 text-brand-muted text-[11px] tracking-widest uppercase">
+          <span>Scroll to Explore</span>
+          <div class="w-5 h-8 border border-brand-muted/40 rounded-full flex items-start justify-center p-1">
+            <div class="w-1 h-2 bg-brand-gold rounded-full animate-bounce"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. ABOUT ME (BEHIND THE LENS) -->
+    <!-- ========================================== -->
+    <section id="about" class="py-24 md:py-32 bg-brand-surface relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Kolom Foto Profil Kreator -->
+          <div class="lg:col-span-5 reveal-on-scroll">
+            <div class="relative group">
+              <!-- Decorative Border Offset -->
+              <div class="absolute -inset-2 rounded-sm border border-brand-gold/30 -z-10 group-hover:border-brand-gold transition-colors duration-500"></div>
+              
+              <div class="relative overflow-hidden rounded-sm aspect-[4/5] bg-brand-darker">
+                <img 
+                  src="https://images.unsplash.com/photo-1552168324-d612d77725e3?auto=format&fit=crop&w=900&q=80" 
+                  alt="Irsan Firmansyah - Photographer &amp; Videographer" 
+                  class="w-full h-full object-cover filter contrast-[1.05] grayscale group-hover:grayscale-0 card-zoom-img duration-700"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                  <span class="text-xs uppercase tracking-[0.25em] text-brand-gold block mb-1">Visual Creator</span>
+                  <p class="font-display font-bold text-xl text-white">Irsan Firmansyah</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Informasi & Filosofi -->
+          <div class="lg:col-span-7 space-y-7 reveal-on-scroll">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-surfaceAlt border border-brand-border text-xs uppercase tracking-widest text-brand-gold rounded-sm">
+              <i class="fa-solid fa-camera"></i>
+              <span>About Me</span>
+            </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+              Behind the Lens
+            </h2>
+
+            <!-- Deskripsi Sesuai Prompt -->
+            <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light">
+              Halo, saya Irsan Firmansyah, seorang mahasiswa Universitas Dharma Indonesia yang memiliki ketertarikan pada dunia fotografi dan videografi. Saya senang mengabadikan momen, mengeksplorasi sudut pandang visual, dan mengubah cerita menjadi karya yang bermakna. Bagi saya, setiap gambar memiliki cerita dan setiap video memiliki emosi yang ingin disampaikan.
+            </p>
+
+            <!-- Metadata Profil Terverifikasi -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-3 border-y border-brand-border/80 text-xs">
+              <div>
+                <span class="text-brand-muted uppercase tracking-wider block mb-1">Nama Lengkap</span>
+                <span class="text-white font-medium text-sm">Irsan Firmansyah</span>
+              </div>
+              <div>
+                <span class="text-brand-muted uppercase tracking-wider block mb-1">Umur</span>
+                <span class="text-white font-medium text-sm">21 Tahun</span>
+              </div>
+              <div>
+                <span class="text-brand-muted uppercase tracking-wider block mb-1">Pendidikan</span>
+                <span class="text-white font-medium text-sm">Universitas Dharma Indonesia</span>
+              </div>
+              <div>
+                <span class="text-brand-muted uppercase tracking-wider block mb-1">Profesi</span>
+                <span class="text-brand-gold font-medium text-sm">Photographer &amp; Videographer</span>
+              </div>
+            </div>
+
+            <!-- Minat Visual & Fokus Kreatif -->
+            <div>
+              <p class="text-xs uppercase tracking-widest text-brand-muted mb-3 font-semibold">Minat Visual &amp; Spesialisasi</p>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-3 py-1.5 bg-brand-darker border border-brand-border text-gray-300 rounded-sm">Cinematic Storytelling</span>
+                <span class="px-3 py-1.5 bg-brand-darker border border-brand-border text-gray-300 rounded-sm">Authentic Portraiture</span>
+                <span class="px-3 py-1.5 bg-brand-darker border border-brand-border text-gray-300 rounded-sm">Live Event Documentation</span>
+                <span class="px-3 py-1.5 bg-brand-darker border border-brand-border text-gray-300 rounded-sm">Color Grading &amp; Editing</span>
+                <span class="px-3 py-1.5 bg-brand-darker border border-brand-border text-gray-300 rounded-sm">Natural Light Studies</span>
+              </div>
+            </div>
+
+            <!-- Tombol Ke Portofolio -->
+            <div class="pt-2">
+              <a href="#portfolio" class="inline-flex items-center gap-3 px-6 py-3 bg-brand-gold hover:bg-brand-goldHover text-black text-xs font-bold uppercase tracking-widest rounded-sm transition-colors duration-300">
+                <span>Lihat Portofolio Karya</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. PORTFOLIO GALLERY (WITH FILTERS, LIGHTBOX & VIDEO MODAL) -->
+    <!-- ========================================== -->
+    <section id="portfolio" class="py-24 md:py-32 bg-brand-dark relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <!-- Header Section -->
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold block mb-2">Curated Visual Works</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+            Portfolio Gallery
+          </h2>
+          <p class="text-brand-muted text-sm max-w-xl mx-auto">
+            Koleksi karya fotografi dan videografi pilihan. Klik setiap item untuk melihat tampilan resolusi penuh atau memutar cuplikan video.
+          </p>
+          <div class="inline-block mt-3 px-3 py-1 text-[11px] text-gray-400 bg-brand-surfaceAlt rounded border border-brand-border">
+            <i class="fa-solid fa-circle-info text-brand-gold mr-1"></i> Catatan: Gambar &amp; video di bawah adalah visual placeholder referensi kurasi hingga karya orisinal Irsan diunggah ke struktur data.
+          </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12 reveal-on-scroll" id="portfolio-filters">
+          <button data-filter="all" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-widest font-semibold rounded-sm bg-brand-gold text-black transition-all duration-300">
+            All Works
+          </button>
+          <button data-filter="photography" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-widest font-semibold rounded-sm bg-brand-surfaceAlt border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300">
+            Photography
+          </button>
+          <button data-filter="videography" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-widest font-semibold rounded-sm bg-brand-surfaceAlt border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300">
+            Videography
+          </button>
+          <button data-filter="portrait" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-widest font-semibold rounded-sm bg-brand-surfaceAlt border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300">
+            Portrait
+          </button>
+          <button data-filter="event" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-widest font-semibold rounded-sm bg-brand-surfaceAlt border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300">
+            Event Documentation
+          </button>
+          <button data-filter="cinematic" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-widest font-semibold rounded-sm bg-brand-surfaceAlt border border-brand-border text-gray-300 hover:text-white hover:border-brand-gold transition-all duration-300">
+            Cinematic Video
+          </button>
+        </div>
+
+        <!-- Gallery Grid (Rendered dynamically via JavaScript) -->
+        <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Items will be injected by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. SERVICES SECTION -->
+    <!-- ========================================== -->
+    <section id="services" class="py-24 md:py-32 bg-brand-surface relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold block mb-2">Capabilities &amp; Solutions</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+            Services Provided
+          </h2>
+          <div class="w-12 h-0.5 bg-brand-gold mx-auto mb-4"></div>
+          <p class="text-brand-muted text-sm">
+            Menghadirkan layanan visual komprehensif mulai dari pra-produksi, eksekusi lapangan, hingga tahap pasca-produksi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Service 1: Photography -->
+          <div class="bg-brand-surfaceAlt p-8 rounded-sm border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="w-14 h-14 bg-brand-darker rounded-sm flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-black transition-colors duration-300">
+                <i class="fa-solid fa-camera"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Photography</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Mengabadikan momen berharga melalui foto berkualitas tinggi dengan komposisi estetis, pencahayaan presisi, dan nuansa visual yang kuat.
+              </p>
+            </div>
+            <button onclick="selectServiceForContact('Photography')" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-gold hover:text-white transition-colors">
+              <span>Book Photography</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+          <!-- Service 2: Videography -->
+          <div class="bg-brand-surfaceAlt p-8 rounded-sm border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="w-14 h-14 bg-brand-darker rounded-sm flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-black transition-colors duration-300">
+                <i class="fa-solid fa-video"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Videography</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Produksi video untuk berbagai kebutuhan komersial, profil, hingga visual branding dengan konsep sinematik modern dan audio dinamis.
+              </p>
+            </div>
+            <button onclick="selectServiceForContact('Videography')" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-gold hover:text-white transition-colors">
+              <span>Book Videography</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+          <!-- Service 3: Event Documentation -->
+          <div class="bg-brand-surfaceAlt p-8 rounded-sm border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="w-14 h-14 bg-brand-darker rounded-sm flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-black transition-colors duration-300">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Event Documentation</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Dokumentasi acara resmi, seremonial, gathering, hingga kegiatan kampus yang merekam setiap kronologi dan emosi penting tanpa ada momen terlewat.
+              </p>
+            </div>
+            <button onclick="selectServiceForContact('Event Documentation')" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-gold hover:text-white transition-colors">
+              <span>Book Documentation</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+          <!-- Service 4: Portrait Photography -->
+          <div class="bg-brand-surfaceAlt p-8 rounded-sm border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="w-14 h-14 bg-brand-darker rounded-sm flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-black transition-colors duration-300">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Portrait Photography</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Fotografi portrait personal maupun profesional untuk kebutuhan personal branding, wisuda, lookbook model, dan portfolio profil personal.
+              </p>
+            </div>
+            <button onclick="selectServiceForContact('Portrait Photography')" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-gold hover:text-white transition-colors">
+              <span>Book Portrait</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+          <!-- Service 5: Video Editing -->
+          <div class="bg-brand-surfaceAlt p-8 rounded-sm border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="w-14 h-14 bg-brand-darker rounded-sm flex items-center justify-center text-brand-gold text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-black transition-colors duration-300">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Video Editing</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                Proses penyuntingan video profesional dengan alur cerita yang menarik, rhythm cutting presisi, sound design, dan color grading sinematik.
+              </p>
+            </div>
+            <button onclick="selectServiceForContact('Video Editing')" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-gold hover:text-white transition-colors">
+              <span>Request Editing</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+          </div>
+
+          <!-- Quick Consultation Card -->
+          <div class="bg-gradient-to-br from-brand-surfaceAlt to-brand-darker p-8 rounded-sm border border-brand-gold/40 flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <span class="text-xs font-mono uppercase text-brand-gold tracking-widest block mb-2">Custom Package</span>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Custom Project?</h3>
+              <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                Punya konsep unik di luar paket umum di atas? Diskusikan ide kreatif Anda secara langsung untuk penyesuaian teknis dan penawaran terbaik.
+              </p>
+            </div>
+            <a href="#contact" class="px-5 py-3 bg-white/10 hover:bg-brand-gold hover:text-black text-white text-xs uppercase tracking-widest font-bold text-center rounded-sm transition-all duration-300">
+              Diskusikan Kebutuhan
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. CREATIVE PROCESS -->
+    <!-- ========================================== -->
+    <section id="process" class="py-24 md:py-32 bg-brand-dark relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold block mb-2">Workflow &amp; Standards</span>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight mb-4">
+            Creative Process
+          </h2>
+          <div class="w-12 h-0.5 bg-brand-gold mx-auto mb-4"></div>
+          <p class="text-brand-muted text-sm">
+            Tahapan sistematis untuk memastikan setiap visi visual terwujud dengan mutu standar sinematik tertinggi.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+          
+          <!-- Step 1 -->
+          <div class="bg-brand-surface p-6 rounded-sm border border-brand-border relative group hover:border-brand-gold transition-all duration-300 reveal-on-scroll">
+            <span class="text-3xl font-display font-extrabold text-brand-border group-hover:text-brand-gold transition-colors block mb-4">01</span>
+            <h3 class="text-base font-bold text-white mb-2">Discussion</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Memahami kebutuhan, target audiens, dan pesan kunci yang ingin disampaikan klien.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-brand-surface p-6 rounded-sm border border-brand-border relative group hover:border-brand-gold transition-all duration-300 reveal-on-scroll">
+            <span class="text-3xl font-display font-extrabold text-brand-border group-hover:text-brand-gold transition-colors block mb-4">02</span>
+            <h3 class="text-base font-bold text-white mb-2">Planning</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Menyusun ide cerita, moodboard visual, shot list, serta persiapan teknis peralatan.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-brand-surface p-6 rounded-sm border border-brand-border relative group hover:border-brand-gold transition-all duration-300 reveal-on-scroll">
+            <span class="text-3xl font-display font-extrabold text-brand-border group-hover:text-brand-gold transition-colors block mb-4">03</span>
+            <h3 class="text-base font-bold text-white mb-2">Production</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Eksekusi pengambilan foto atau video secara profesional dengan sudut pandang sinematik.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-brand-surface p-6 rounded-sm border border-brand-border relative group hover:border-brand-gold transition-all duration-300 reveal-on-scroll">
+            <span class="text-3xl font-display font-extrabold text-brand-border group-hover:text-brand-gold transition-colors block mb-4">04</span>
+            <h3 class="text-base font-bold text-white mb-2">Editing</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Penyuntingan teliti, perbaikan warna (color grading), sound design, dan sentuhan visual akhir.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="bg-brand-surface p-6 rounded-sm border border-brand-border relative group hover:border-brand-gold transition-all duration-300 reveal-on-scroll">
+            <span class="text-3xl font-display font-extrabold text-brand-border group-hover:text-brand-gold transition-colors block mb-4">05</span>
+            <h3 class="text-base font-bold text-white mb-2">Delivery</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Menyerahkan hasil master resolusi penuh sesuai tenggat waktu yang disepakati.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. CONTACT SECTION -->
+    <!-- ========================================== -->
+    <section id="contact" class="py-24 md:py-32 bg-brand-surface relative border-t border-brand-border/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          
+          <!-- Informasi Kontak Kiri -->
+          <div class="lg:col-span-5 space-y-6 reveal-on-scroll">
+            <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold block">Let's Collaborate</span>
+            
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-white tracking-tight">
+              Let's Create Something Amazing.
+            </h2>
+            
+            <p class="text-gray-300 text-sm md:text-base font-light leading-relaxed">
+              Punya ide atau proyek yang ingin diwujudkan? Mari berdiskusi dan menciptakan karya visual yang berkesan.
+            </p>
+
+            <div class="space-y-4 pt-4 border-t border-brand-border text-sm">
+              
+              <!-- Profiler Info -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-sm bg-brand-surfaceAlt border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">Afiliasi Akademik</span>
+                  <p class="font-medium text-white">Mahasiswa Universitas Dharma Indonesia</p>
+                </div>
+              </div>
+
+              <!-- Email Link Placeholder Resmi -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-sm bg-brand-surfaceAlt border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">Email Direct</span>
+                  <a href="mailto:contact.irsanfirmansyah@gmail.com" class="font-medium text-white hover:text-brand-gold transition-colors">
+                    contact.irsanfirmansyah@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- WhatsApp Chat Placeholder -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-sm bg-brand-surfaceAlt border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">WhatsApp Message</span>
+                  <a href="https://wa.me/?text=Halo%20Irsan%20Firmansyah,%20saya%20tertarik%20dengan%20layanan%20karya%20visual%20Anda." target="_blank" rel="noopener noreferrer" class="font-medium text-white hover:text-brand-gold transition-colors">
+                    Hubungi via WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <!-- Instagram Profiler -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-sm bg-brand-surfaceAlt border border-brand-border flex items-center justify-center text-brand-gold shrink-0">
+                  <i class="fa-brands fa-instagram text-lg"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">Instagram Portfolio</span>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="font-medium text-white hover:text-brand-gold transition-colors">
+                    @irsanfirmansyah (Official Channel)
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Social Media Icon Row -->
+            <div class="pt-4 flex items-center gap-3">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Irsan Firmansyah" class="w-10 h-10 rounded-sm bg-brand-darker border border-brand-border hover:border-brand-gold hover:text-brand-gold flex items-center justify-center text-gray-300 transition-colors">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://wa.me/?text=Halo%20Irsan" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Irsan Firmansyah" class="w-10 h-10 rounded-sm bg-brand-darker border border-brand-border hover:border-brand-gold hover:text-brand-gold flex items-center justify-center text-gray-300 transition-colors">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="mailto:contact.irsanfirmansyah@gmail.com" aria-label="Kirim Email ke Irsan Firmansyah" class="w-10 h-10 rounded-sm bg-brand-darker border border-brand-border hover:border-brand-gold hover:text-brand-gold flex items-center justify-center text-gray-300 transition-colors">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Formulir Kontak Kanan -->
+          <div class="lg:col-span-7 bg-brand-surfaceAlt p-8 md:p-10 rounded-sm border border-brand-border reveal-on-scroll">
+            
+            <form id="contact-form" class="space-y-5" novalidate>
+              
+              <!-- Form Status Alert Box -->
+              <div id="form-alert" class="hidden p-4 rounded-sm text-xs leading-relaxed"></div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- Nama -->
+                <div>
+                  <label for="contact-name" class="block text-xs uppercase font-semibold text-gray-300 tracking-wider mb-2">
+                    Nama Lengkap <span class="text-brand-gold">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    required 
+                    placeholder="e.g. John Doe"
+                    class="w-full bg-brand-darker border border-brand-border rounded-sm px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold transition-colors"
+                  />
+                  <p class="text-[11px] text-red-400 mt-1 hidden" id="name-error">Harap masukkan nama lengkap Anda.</p>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="contact-email" class="block text-xs uppercase font-semibold text-gray-300 tracking-wider mb-2">
+                    Alamat Email <span class="text-brand-gold">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    required 
+                    placeholder="name@example.com"
+                    class="w-full bg-brand-darker border border-brand-border rounded-sm px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold transition-colors"
+                  />
+                  <p class="text-[11px] text-red-400 mt-1 hidden" id="email-error">Harap masukkan alamat email yang valid.</p>
+                </div>
+              </div>
+
+              <!-- Pilihan Jenis Layanan -->
+              <div>
+                <label for="contact-service" class="block text-xs uppercase font-semibold text-gray-300 tracking-wider mb-2">
+                  Pilihan Jenis Layanan <span class="text-brand-gold">*</span>
+                </label>
+                <select 
+                  id="contact-service" 
+                  required
+                  class="w-full bg-brand-darker border border-brand-border rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"
+                >
+                  <option value="" disabled selected>Pilih salah satu layanan...</option>
+                  <option value="Photography">Photography (Foto Komersial &amp; Konseptual)</option>
+                  <option value="Videography">Videography (Produksi Video Kreatif)</option>
+                  <option value="Event Documentation">Event Documentation (Acara &amp; Kegiatan)</option>
+                  <option value="Portrait Photography">Portrait Photography (Personal / Model)</option>
+                  <option value="Video Editing">Video Editing &amp; Post-Production</option>
+                  <option value="Custom Consultation">Custom / Konsultasi Lainnya</option>
+                </select>
+                <p class="text-[11px] text-red-400 mt-1 hidden" id="service-error">Harap tentukan jenis layanan yang Anda butuhkan.</p>
+              </div>
+
+              <!-- Pesan -->
+              <div>
+                <label for="contact-message" class="block text-xs uppercase font-semibold text-gray-300 tracking-wider mb-2">
+                  Pesan &amp; Detail Proyek <span class="text-brand-gold">*</span>
+                </label>
+                <textarea 
+                  id="contact-message" 
+                  rows="4" 
+                  required
+                  placeholder="Ceritakan rencana acara, ide konsep, lokasi, atau estimasi jadwal yang Anda inginkan..."
+                  class="w-full bg-brand-darker border border-brand-border rounded-sm px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-gold transition-colors"
+                ></textarea>
+                <p class="text-[11px] text-red-400 mt-1 hidden" id="message-error">Harap sertakan deskripsi pesan atau proyek Anda.</p>
+              </div>
+
+              <!-- Tombol Submit -->
+              <button 
+                type="submit" 
+                id="submit-btn"
+                class="w-full py-4 bg-brand-gold hover:bg-brand-goldHover text-black font-bold text-xs uppercase tracking-[0.2em] rounded-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-black/50"
+              >
+                <span>Send Message</span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 8. FOOTER & BACK TO TOP -->
+  <!-- ========================================== -->
+  <footer class="bg-brand-darker py-14 border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
+      
+      <!-- Brand & Title -->
+      <div class="text-center md:text-left">
+        <a href="#home" class="font-display font-extrabold tracking-[0.2em] text-white text-base hover:text-brand-gold transition-colors">
+          IRSAN FIRMANSYAH
+        </a>
+        <p class="text-xs text-brand-muted tracking-wider mt-1">
+          Photographer &amp; Videographer — Mahasiswa Universitas Dharma Indonesia
+        </p>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <div class="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-widest text-gray-400 font-medium">
+        <a href="#home" class="hover:text-brand-gold transition-colors">Home</a>
+        <a href="#about" class="hover:text-brand-gold transition-colors">About</a>
+        <a href="#portfolio" class="hover:text-brand-gold transition-colors">Portfolio</a>
+        <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
+        <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
+      </div>
+
+      <!-- Copyright & Back to Top -->
+      <div class="flex items-center gap-4 text-xs text-brand-muted">
+        <span>&copy; <span id="current-year"></span> Irsan Firmansyah. All rights reserved.</span>
+        <button 
+          id="back-to-top" 
+          type="button" 
+          aria-label="Kembali ke atas" 
+          class="w-9 h-9 rounded-sm bg-brand-surface border border-brand-border hover:border-brand-gold text-brand-gold flex items-center justify-center transition-colors"
+        >
+          <i class="fa-solid fa-chevron-up text-xs"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 9. LIGHTBOX MODAL (PHOTO VIEW) -->
+  <!-- ========================================== -->
+  <div id="image-lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-4 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Tampilan Foto Resolusi Penuh">
+    <button id="close-lightbox" class="absolute top-6 right-6 text-gray-400 hover:text-white text-3xl focus:outline-none transition-colors" aria-label="Tutup Lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-5xl w-full max-h-[90vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[75vh] object-contain rounded-sm shadow-2xl"/>
+      <div class="mt-4 text-center max-w-xl">
+        <span id="lightbox-category" class="text-[10px] uppercase font-bold tracking-widest text-brand-gold block mb-1"></span>
+        <h4 id="lightbox-title" class="font-display font-bold text-lg text-white"></h4>
+        <p id="lightbox-desc" class="text-xs text-gray-400 mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 10. VIDEO PLAYER MODAL -->
+  <!-- ========================================== -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-4 backdrop-blur-md" role="dialog" aria-modal="true" aria-label="Tampilan Video Player">
+    <button id="close-video-modal" class="absolute top-6 right-6 text-gray-400 hover:text-white text-3xl focus:outline-none transition-colors" aria-label="Tutup Video Modal">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="max-w-4xl w-full flex flex-col">
+      <div class="relative w-full aspect-video bg-black rounded-sm overflow-hidden border border-brand-border">
+        <video id="modal-video-element" class="w-full h-full object-contain" controls preload="metadata">
+          <source src="" type="video/mp4"/>
+          Browser Anda tidak mendukung tag video HTML5.
+        </video>
+      </div>
+      <div class="mt-4">
+        <span id="video-modal-category" class="text-[10px] uppercase font-bold tracking-widest text-brand-gold block mb-1"></span>
+        <h4 id="video-modal-title" class="font-display font-bold text-lg text-white"></h4>
+        <p id="video-modal-desc" class="text-xs text-gray-400 mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 11. JAVASCRIPT: DATA & INTERACTIVITY -->
+  <!-- ========================================== -->
+  <script>
+    /**
+     * STRUKTUR DATA PORTOFOLIO IRSAN FIRMANSYAH
+     * Catatan: Anda dapat dengan mudah menambahkan, menghapus, atau mengganti tautan gambar & video asli Irsan di sini.
+     */
+    const portfolioData = [
+      {
+        id: 1,
+        title: "Golden Hour Atmosphere",
+        category: "photography",
+        categoryLabel: "Photography",
+        type: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?auto=format&fit=crop&w=1200&q=80",
+        thumbUrl: "https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?auto=format&fit=crop&w=800&q=80",
+        description: "Eksplorasi siluet dan pencahayaan natural senja dengan kontras warna hangat."
+      },
+      {
+        id: 2,
+        title: "Echoes of Silence (Cinematic Reel)",
+        category: "cinematic",
+        categoryLabel: "Cinematic Video",
+        type: "video",
+        mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        thumbUrl: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
+        description: "Komposisi sinematik 24fps dengan teknik movement halus dan grading bernuansa film 35mm."
+      },
+      {
+        id: 3,
+        title: "Charismatic Depth Portrait",
+        category: "portrait",
+        categoryLabel: "Portrait",
+        type: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+        thumbUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+        description: "Karakter wajah dan ekspresi mendalam dengan depth of field rendah lensa 85mm."
+      },
+      {
+        id: 4,
+        title: "Cultural Festival & Stage Live",
+        category: "event",
+        categoryLabel: "Event Documentation",
+        type: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+        thumbUrl: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+        description: "Merekam energi, ritme panggung, dan antusiasme pengunjung dalam dokumentasi acara."
+      },
+      {
+        id: 5,
+        title: "City in Motion (Short Clip)",
+        category: "videography",
+        categoryLabel: "Videography",
+        type: "video",
+        mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        thumbUrl: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80",
+        description: "Visualisasi ritme perkotaan dengan dynamic speed-ramp dan framing simetris."
+      },
+      {
+        id: 6,
+        title: "Urban Expression Monochrome",
+        category: "portrait",
+        categoryLabel: "Portrait",
+        type: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80",
+        thumbUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+        description: "Pemanfaatan kontras hitam-putih tajam untuk mempertegas garis dan tekstur subjek."
+      },
+      {
+        id: 7,
+        title: "Campus Academic Seminar & Ceremony",
+        category: "event",
+        categoryLabel: "Event Documentation",
+        type: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80",
+        thumbUrl: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80",
+        description: "Dokumentasi formal prosesi acara universitas dengan pencahayaan indoor yang tertata rapi."
+      },
+      {
+        id: 8,
+        title: "Wilderness Horizon & Visual Mood",
+        category: "photography",
+        categoryLabel: "Photography",
+        type: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+        thumbUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+        description: "Fotografi lanskap pegunungan dengan gradasi kabut dingin dan atmosfer tenang."
+      },
+      {
+        id: 9,
+        title: "Atmospheric Journey (Cinematic Cut)",
+        category: "cinematic",
+        categoryLabel: "Cinematic Video",
+        type: "video",
+        mediaUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+        thumbUrl: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+        description: "Penggabungan visual sinematik dengan rasio widescreen dan ritme editing terukur."
+      }
+    ];
+
+    // Current Year Update
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // DOM Elements
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+    const imageLightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxCat = document.getElementById('lightbox-category');
+    const closeLightboxBtn = document.getElementById('close-lightbox');
+
+    const videoModal = document.getElementById('video-modal');
+    const modalVideoElement = document.getElementById('modal-video-element');
+    const videoModalTitle = document.getElementById('video-modal-title');
+    const videoModalDesc = document.getElementById('video-modal-desc');
+    const videoModalCat = document.getElementById('video-modal-category');
+    const closeVideoModalBtn = document.getElementById('close-video-modal');
+
+    /**
+     * Render Gallery Grid
+     */
+    function renderGallery(filter = 'all') {
+      portfolioGrid.innerHTML = '';
+      
+      const filteredItems = filter === 'all' 
+        ? portfolioData 
+        : portfolioData.filter(item => item.category === filter);
+
+      filteredItems.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = "group relative rounded-sm overflow-hidden bg-brand-surfaceAlt border border-brand-border cursor-pointer transition-all duration-300 hover:border-brand-gold";
+        card.setAttribute('data-id', item.id);
+
+        const isVideo = item.type === 'video';
+
+        card.innerHTML = `
+          <div class="relative aspect-[4/3] w-full overflow-hidden bg-brand-darker">
+            <img src="${item.thumbUrl}" alt="${item.title}" class="w-full h-full object-cover card-zoom-img filter brightness-90 group-hover:brightness-100" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
+            
+            ${isVideo ? `
+              <div class="absolute top-4 right-4 w-9 h-9 rounded-full bg-brand-gold/90 text-black flex items-center justify-center text-xs shadow-md">
+                <i class="fa-solid fa-play ml-0.5"></i>
+              </div>
+            ` : `
+              <div class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center text-xs group-hover:bg-brand-gold group-hover:text-black group-hover:border-transparent transition-colors">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            `}
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold block mb-1">
+                ${item.categoryLabel} ${isVideo ? '• Video' : ''}
+              </span>
+              <h3 class="font-display font-bold text-white text-base group-hover:text-brand-gold transition-colors">
+                ${item.title}
+              </h3>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          openMediaViewer(item);
+        });
+
+        portfolioGrid.appendChild(card);
+      });
+    }
+
+    /**
+     * Handle Modal Viewer (Lightbox or Video)
+     */
+    function openMediaViewer(item) {
+      if (item.type === 'video') {
+        modalVideoElement.src = item.mediaUrl;
+        videoModalTitle.textContent = item.title;
+        videoModalDesc.textContent = item.description;
+        videoModalCat.textContent = item.categoryLabel;
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('flex');
+        modalVideoElement.play().catch(() => {});
+      } else {
+        lightboxImg.src = item.mediaUrl;
+        lightboxImg.alt = item.title;
+        lightboxTitle.textContent = item.title;
+        lightboxDesc.textContent = item.description;
+        lightboxCat.textContent = item.categoryLabel;
+        imageLightbox.classList.remove('hidden');
+        imageLightbox.classList.add('flex');
+      }
+    }
+
+    // Close Lightbox
+    function closeLightbox() {
+      imageLightbox.classList.add('hidden');
+      imageLightbox.classList.remove('flex');
+      lightboxImg.src = '';
+    }
+
+    // Close Video Modal
+    function closeVideoModal() {
+      videoModal.classList.add('hidden');
+      videoModal.classList.remove('flex');
+      modalVideoElement.pause();
+      modalVideoElement.currentTime = 0;
+      modalVideoElement.src = '';
+    }
+
+    closeLightboxBtn.addEventListener('click', closeLightbox);
+    closeVideoModalBtn.addEventListener('click', closeVideoModal);
+
+    imageLightbox.addEventListener('click', (e) => {
+      if (e.target === imageLightbox) closeLightbox();
+    });
+
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) closeVideoModal();
+    });
+
+    // Keyboard support (Escape to close)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeVideoModal();
+      }
+    });
+
+    // Portfolio Filter Buttons Click Logic
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-brand-gold', 'text-black');
+          b.classList.add('bg-brand-surfaceAlt', 'text-gray-300', 'border', 'border-brand-border');
+        });
+
+        btn.classList.add('bg-brand-gold', 'text-black');
+        btn.classList.remove('bg-brand-surfaceAlt', 'text-gray-300', 'border-brand-border');
+
+        const filterValue = btn.getAttribute('data-filter');
+        renderGallery(filterValue);
+      });
+    });
+
+    // Initial render
+    renderGallery('all');
+
+    /**
+     * Services Section -> Contact Prefill
+     */
+    window.selectServiceForContact = function(serviceName) {
+      const serviceSelect = document.getElementById('contact-service');
+      const contactSection = document.getElementById('contact');
+      if (serviceSelect && contactSection) {
+        serviceSelect.value = serviceName;
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        // Visual indicator on select box
+        serviceSelect.classList.add('ring-2', 'ring-brand-gold');
+        setTimeout(() => {
+          serviceSelect.classList.remove('ring-2', 'ring-brand-gold');
+        }, 1500);
+      }
+    };
+
+    /**
+     * Mobile Navigation Drawer Toggle
+     */
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.className = "fa-solid fa-bars text-xl";
+        } else {
+          menuIcon.className = "fa-solid fa-xmark text-xl";
+        }
+      });
+
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          menuIcon.className = "fa-solid fa-bars text-xl";
+        });
+      });
+    }
+
+    /**
+     * Back To Top Button
+     */
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    /**
+     * Contact Form Validation & Honest Submission Feedback
+     */
+    const contactForm = document.getElementById('contact-form');
+    const formAlert = document.getElementById('form-alert');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('contact-name');
+      const email = document.getElementById('contact-email');
+      const service = document.getElementById('contact-service');
+      const message = document.getElementById('contact-message');
+
+      let isValid = true;
+
+      // Validate Name
+      if (!name.value.trim()) {
+        document.getElementById('name-error').classList.remove('hidden');
+        name.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        document.getElementById('name-error').classList.add('hidden');
+        name.classList.remove('border-red-500');
+      }
+
+      // Validate Email with regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailRegex.test(email.value)) {
+        document.getElementById('email-error').classList.remove('hidden');
+        email.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        document.getElementById('email-error').classList.add('hidden');
+        email.classList.remove('border-red-500');
+      }
+
+      // Validate Service
+      if (!service.value) {
+        document.getElementById('service-error').classList.remove('hidden');
+        service.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        document.getElementById('service-error').classList.add('hidden');
+        service.classList.remove('border-red-500');
+      }
+
+      // Validate Message
+      if (!message.value.trim()) {
+        document.getElementById('message-error').classList.remove('hidden');
+        message.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        document.getElementById('message-error').classList.add('hidden');
+        message.classList.remove('border-red-500');
+      }
+
+      if (isValid) {
+        // Tampilkan pesan status yang jujur dan transparan
+        formAlert.className = "p-4 rounded-sm text-xs leading-relaxed bg-brand-surface border border-brand-gold text-gray-200 block";
+        formAlert.innerHTML = `
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-gold text-base mt-0.5"></i>
+            <div>
+              <p class="font-bold text-white mb-1">Terima kasih, ${escapeHtml(name.value.trim())}!</p>
+              <p class="mb-2">Permintaan layanan <strong>${escapeHtml(service.value)}</strong> Anda telah terinput di browser ini. Karena website ini beroperasi sebagai antarmuka portofolio statis (front-end demo), silakan lanjutkan pesan ini langsung ke kontak pribadi Irsan untuk respon cepat:</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <a href="https://wa.me/?text=Halo%20Irsan%20Firmansyah,%20nama%20saya%20${encodeURIComponent(name.value.trim())}.%20Saya%20tertarik%20dengan%20layanan%20${encodeURIComponent(service.value)}:%20${encodeURIComponent(message.value.trim())}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-brand-gold text-black font-bold rounded-sm inline-flex items-center gap-1.5">
+                  <i class="fa-brands fa-whatsapp"></i> Teruskan ke WhatsApp
+                </a>
+                <a href="mailto:contact.irsanfirmansyah@gmail.com?subject=Inquiry%20${encodeURIComponent(service.value)}%20-%20${encodeURIComponent(name.value.trim())}&body=${encodeURIComponent(message.value.trim())}" class="px-3 py-1.5 bg-brand-darker border border-brand-border text-white hover:text-brand-gold font-bold rounded-sm inline-flex items-center gap-1.5">
+                  <i class="fa-solid fa-envelope"></i> Kirim via Email
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        contactForm.reset();
+      }
+    });
+
+    // Helper sanitasi string sederhana
+    function escapeHtml(string) {
+      return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;',
+          '/': '&#x2F;',
+          '`': '&#x60;',
+          '=': '&#x3D;'
+        }[s];
+      });
+    }
+
+    /**
+     * Scroll Reveal Animation using IntersectionObserver
+     */
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -40px 0px"
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
